@@ -1,0 +1,20 @@
+.user-menu-icon {
+    background-image: url(../../img/white/user-circle.png); width: 40px; height: 40px; background-size: 30px; float: right; display: inline-block; margin: 10px 25px 0 0; 
+    background-position: center; cursor: pointer; background-color: white;border-radius: 50%;box-sizing: border-box; border: 1px solid #fff;
+}
+.user-menu-icon.active { background-color: white; }
+.user-menu {
+    position: absolute; top: 60px; right: 0; width: 300px; height: 210px; background-color: #232426; box-sizing: border-box;
+    padding: 20px; color: #fff; overflow: hidden; display: none;
+}
+.session-info { padding: 0 0 10px 0; }
+.session-info .session-full-name { font-size: 16px; }
+.session-info .session-email { font-size: 11px; }
+.user-menu li {
+    width: 100%; height: 32px; background-size: auto 75%; padding-left: 40px; display: block; background-position: left center; 
+    cursor: pointer; margin: 10px 0; line-height: 32px;
+}
+.user-menu li[name=account] { background-image: url(../../img/white/user-circle.png); }
+.user-menu li[name=support] { background-image: url(../../img/white/support.png); }
+.user-menu li[name=logout] { background-image: url(../../img/white/logout.png); }
+.user-menu li a { color: #fff; }

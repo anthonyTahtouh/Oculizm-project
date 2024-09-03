@@ -1,0 +1,69 @@
+<html lang="en">
+
+<head>
+    <title>As Seen On</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+    <script src="js/jquery.min.js"></script>
+
+
+
+<section class="Section Section--spacingNormal" data-section-id="oculizm-aso-section" style="display: none">
+    <header class="SectionHeader SectionHeader--center">
+        <div class="Container">
+            <h3 class="SectionHeader__Heading Heading u-h3">As Seen On</h3>
+
+            <div class="oculizm-container">
+                <div>
+                    <script id='oculizm_aso_script'>
+                        function waitForElm(selector) {
+                            return new Promise(resolve => {
+                                if (document.querySelector(selector)) {
+                                    return resolve(document.querySelector(selector));
+                                }
+                                const observer = new MutationObserver(mutations => {
+                                    if (document.querySelector(selector)) {
+                                        resolve(document.querySelector(selector));
+                                        observer.disconnect();
+                                    }
+                                });
+                                observer.observe(document.body, {
+                                    childList: true,
+                                    subtree: true
+                                });
+                            });
+                        }
+
+                        var OCULIZM_ASO_PARENT = jQuery('script#oculizm_aso_script').parent();
+
+                        OCULIZM_ASO_PARENT.append('<div id="oclzmAsSeenOn"></div>');
+
+                        jQuery.getScript('https://app.oculizm.com/wp-content/uploads/58520_as-seen-on.js',function(script,textStatus,jqXHR ){
+                            if(textStatus==='success') {
+                                jQuery('#oclzmAsSeenOn').oculize({ productID: '4342706143330', region: 'gb',}); 
+
+                                // only show this section if we have enough posts to show
+                                var asoPostString = '.post-grid .post';
+                                waitForElm(asoPostString).then((elm) => {
+                                    if ($(asoPostString).length >= 2) jQuery('.Section[data-section-id=oculizm-aso-section]').show();
+                                });
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </header>
+</section>
+
+
+
+
+
+
+</body>
+
+</html>

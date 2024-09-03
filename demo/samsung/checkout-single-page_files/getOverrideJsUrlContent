@@ -1,0 +1,13 @@
+// (function(){
+
+//     if(/\/uk\/.*?cart/.test(window.location.href)){
+//         $(document).ready(function(){
+//             setInterval(function(){
+//                     if($(".col-xs-6.no-padding.text-right")[0].innerText != $(".grand-total")[1].innerText)
+//                     {                         
+//                         $(".col-xs-6.no-padding.text-right")[0].innerText = $(".grand-total")[1].innerText;                     
+//                     }
+//             }, 500);
+//         });
+//     }  
+// })();

@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+	<title>Carousel</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+	<script src="js/jquery.min.js"></script>
+
+<script id='oculizm_grid_script'>
+document.addEventListener('DOMContentLoaded', function load() {if (!window.jQuery) return setTimeout(load, 50);
+	var OCULIZM_Grid_PARENT=jQuery('script#oculizm_grid_script').parent();
+	OCULIZM_Grid_PARENT.append('<div id="oclzm"></div>');
+	jQuery.getScript('https://uat.oculizm.com/wp-content/uploads/10152_33_grid.js',function(script,textStatus,jqXHR ){
+		if(textStatus==='success') jQuery('#oclzm').oculize({   region: ''}); 
+	});
+}, false);
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+Plugin Name: Forminator Stripe Add-on
+Author: WPMUDEV
+
+Change Log:
+----------------------------------------------------------------------
+
+= 1.0.9 ( 2023-10-09 ) =
+
+- Improvement: Minor improvements in copy
+
+= 1.0.8 ( 2023-05-23 ) =
+
+- Improvement: Refined exception handling to display detailed error messages
+
+= 1.0.7 ( 2023-02-07 ) =
+
+- Fix: Fatal error on form submission when the custom metadata of Stripe field is set to a Number field in a subscription payment plan
+- Fix: When the subscription payment plan is enabled in Stripe field, payment details are overridden
+
+= 1.0.6 ( 2022-12-14 ) =
+
+- Fix: The form fails to process when Stripe is used and Multiple names are set in the Billing information
+
+= 1.0.5 ( 2022-07-20 ) =
+
+- Fix: Stripe Subscription fatal error on live payments
+
+= 1.0.4 ( 2022-05-26 ) =
+
+- Fix: Form submission error with Stripe
+
+= 1.0.3 ( 2022-05-19 ) =
+
+- Improvement: Make it compatible with the refactoring submission process
+- Improvement: Update forminator minimum version notice
+
+= 1.0.2 ( 2021-10-27 ) =
+
+- Improvement: add a new language project for stripe add-on
+
+= 1.0.1 ( 2021-10-19 ) =
+
+- Fix: Live Stripe mode is not working
+
+= 1.0 ( 2021-08-12 ) =
+
+- First public release
+
+
+1145726-1697107728-ai

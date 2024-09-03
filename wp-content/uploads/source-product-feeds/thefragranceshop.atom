@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://thefragranceshop.co.uk/products/123456</id>
+  <title>The Fragrance Shop</title>
+  <updated>2024-01-03T12:00:00+00:00</updated>
+  
+  <entry>
+    <id>https://thefragranceshop.co.uk/products/123456</id>
+    <published>2024-01-03T12:00:00+00:00</published>
+    <updated>2024-01-03T12:00:00+00:00</updated>
+    <link rel="alternate" type="text/html" href="https://thefragranceshop.co.uk/products/dummy-fragrance"/>
+    <title>Dummy Fragrance</title>
+    <s:type>perfume</s:type>
+    <s:vendor>The Fragrance Shop</s:vendor>
+    
+    <summary type="html">
+      <![CDATA[<table border="0">
+        <tr>
+          <td width="200"><img width="200" src="https://thefragranceshop.co.uk/images/dummy-fragrance.jpg"></td>
+          <td valign="bottom">
+            <p>
+              <strong>Vendor: </strong>The Fragrance Shop<br>
+              <strong>Type: </strong>perfume<br>
+              <strong>Price: </strong>29.99 GBP
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <p>This is a sample fragrance for testing purposes.</p>
+          </td>
+        </tr>
+      </table>]]>
+    </summary>
+    
+    <s:tag>sample</s:tag>
+    <s:tag>fragrance</s:tag>
+    
+    <s:variant>
+      <id>https://thefragranceshop.co.uk/products/123456</id>
+      <title>Default Title</title>
+      <s:price currency="GBP">29.99</s:price>
+      <s:sku>dummy_fragrance</s:sku>
+      <s:grams>150</s:grams>
+    </s:variant>
+  </entry>
+</feed>

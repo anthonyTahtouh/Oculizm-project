@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Demo Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+        .logo {
+            height: 14vh;
+            width: 27vw;
+            padding: 8px;
+            background-origin: content-box;
+            background-position: 50%;
+            background-repeat: no-repeat;
+            margin-bottom: 6vh;
+        }
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-bottom: 2vh;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .video-thumbnail {
+            cursor: pointer;
+        }
+        .link {
+            color: black;
+            text-decoration: none;
+        }
+        .link:hover {
+            text-decoration: underline;
+            color: #485465;
+        }
+    </style>
+</head>
+<body>
+
+    <img src="images/soreto_logo.svg" alt="Soreto Logo" class="logo">
+
+    <h1>Demo Stores</h1>
+    <br>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Luma</th>
+                <th>Mockups</th>
+                <th>Video</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="https://onboarding2-demo.soreto.me" target="_blank" class="link">Luma Sales Demo Store - Samsung</a></td>
+                <td><a href="samsung/samsung-homepage.htm" target="_blank" class="link">Mockup Sales Demo Store - Samsung</a></td>
+                <td><img src="images/100.png" alt="Video Thumbnail 1" class="video-thumbnail"></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

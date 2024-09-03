@@ -1,0 +1,168 @@
+
+
+
+
+
+/* SAVED POST */
+.saved-post { 
+    font-size: 16px; text-align: left; vertical-align: top; display: grid; width: calc(25% - 10px);
+     margin: 0; box-sizing: border-box;position: relative; overflow: hidden; cursor: pointer;
+     grid-template-rows: 1fr;background-color: white;border-radius: 10px;padding: 10px;
+}
+
+
+.saved-post .post-title { 
+    display: block; margin: 0; color: #000; background-color: #fff; font-weight: bold; padding: 5px; font-size: 12px; position: absolute; bottom: 0;
+}
+.saved-post .vid-holder { cursor: default; }
+.saved-post a { opacity: 1.0; }
+.saved-post a:hover { opacity: 0.75; }
+.saved-post .social-network-icon { 
+    display: none; width: 32px; height: 32px; float: left; border-radius: 50%; margin: 5px; box-sizing: border-box;
+    background-position: center; background-size: 100%;
+}
+.saved-post[data-social-network=facebook] .social-network-icon { 
+    display: block; background-image: url(../../img/social/facebook.png); background-color: #3876ea; background-size: 24px; background-position: 25% 50%;
+}
+.saved-post[data-social-network=instagram] .social-network-icon {
+    display: block; background-image: url(../../img/social/instagram.png); 
+}
+.saved-post[data-social-network=tiktok] .social-network-icon { 
+    display: block; background-image: url(../../img/social/tiktok.png); background-color: #00acee; background-size: 28px;
+}
+.saved-post[data-social-network=twitter] .social-network-icon { 
+    display: block; background-image: url(../../img/social/x.png); background-color: #000; background-size: 28px;
+}
+.post-pinned-icon { 
+    display: none; background-image: url(../../img/white/pinned.png); background-size: 24px; float: left; margin: 5px; width: 32px; border-radius: 50%; 
+    height: 32px; box-sizing: border-box; background-position: center center;
+}
+.saved-post[data-pinned=true] .post-pinned-icon { display: block; }
+.post-status-icon { 
+    display: none; width: 32px; height: 32px; float: left; border-radius: 50%; margin: 5px; background-position: center; background-size: 20px; box-sizing: border-box;
+}
+.saved-post[data-post-status=draft] .post-status-icon { display: block; background-image: url(../../img/white/save.png); }
+.saved-post[data-post-status=future] .post-status-icon { display: block; background-image: url(../../img/clock.png); }
+.saved-post .label-icon { background-image: url(../../img/white/label.png); }
+.saved-post .label-icon span { color: #fff; }
+.saved-post .post-meta-item { display: block; }
+.saved-post .post-meta-item[name=date] { background-image: url(../../img/clock.png); background-size: 12px; opacity: 0.5; font-size: 11px; }
+.saved-post .post-meta-item[name=author] { background-image: url(../../img/user.png); background-size: 10px; opacity: 0.5; font-size: 11px; }
+.modal-notice { background-color: #eefeee; height: 40px; line-height: 40px; padding: 10px 20px; margin-top: 40px; font-size: 16px; border-radius: 10px; }
+.modal-notice span { display: inline-block; width: 24px; height: 24px; vertical-align: middle; margin-right: 10px; }
+.modal-notice img { width: 100%; top: -2px; }
+
+
+
+/* post actions */
+.saved-post .post-actions-overlay:hover { opacity: 1.0; transition: all 0.3s ease; }
+.saved-post .post-actions-overlay a[data-action=delete-post] { 
+    top: 5px; right: 5px; border-radius: 50%; background-color: #ffffff; background-image: url(../../img/delete.png); width: 32px; 
+    height: 32px; float: right; background-position: center center; background-size: 14px; position: absolute;
+}
+.saved-post .post-actions-overlay a[data-action=edit-post] { 
+    background-image: url(../../img/edit.png); background-size: 14px; background-position: center; width: 32px; height: 32px; float: right; cursor: pointer; 
+    transition: all 0.3s ease; position: absolute; right: 41px; background-color: #ffffff; top: 5px; border-radius: 50%;
+}
+.saved-post .post-actions-overlay a[data-action=push-to-top] { 
+    display: none; background-image: url(../../img/push-to-top.png); background-size: 14px; background-position: center; width: 32px; height: 32px; float: right; 
+    cursor: pointer; transition: all 0.3s ease; position: absolute; right: 77px; background-color: #ffffff; top: 5px; border-radius: 50%;
+}
+body.is-touch .saved-post .post-actions-overlay a[data-action=edit-post] { background-color: rgba(255, 255, 255, 0.5); }
+body.is-touch .saved-post .post-actions-overlay a[data-action=push-to-top] { background-color: rgba(255, 255, 255, 0.5); }
+body.is-touch .saved-post .post-actions-overlay { opacity: 1.0; background-color: transparent; }
+body.is-touch .saved-post .post-actions-overlay a[data-action=delete-post] { background-color: rgba(255, 255, 255, 0.5); }
+body.administrator .saved-post .post-actions-overlay a[data-action=push-to-top] { display: block; opacity: 1; }
+
+
+/* NETWORK POST */
+.network-post { 
+    font-size: 16px; text-align: left; vertical-align: top; padding: 10px; margin: 0; box-sizing: border-box;position: relative;
+    overflow: hidden;  display: grid; grid-template-rows: 1fr;background-color: white;border-radius: 10px; width: calc(25% - 10px);
+}
+
+.network-post .post-details { padding-bottom: 5px; background-color: #ffffff; }
+.network-post .post-title { display: block; margin: 0; color: #000; background-color: #fff; font-weight: bold; padding: 5px; font-size: 12px; }
+.network-post .post-date {  background-color: #fff;background-image: url(../../img/clock.png);background-size: 12px; font-size: 11px;padding-left: 22px;background-position-y: 2px;background-position-x: 5px;}
+.network-post a { opacity: 1.0; }
+.network-post a:hover { opacity: 0.75; }
+.network-post[data-social-network=facebook] .like-count { background-image: url(../../img/like.png); }
+.network-post[data-social-network=instagram] .like-count { background-image: url(../../img/like.png); }
+.network-post[data-social-network=instagram] .retweet-count { display: none; }
+.network-post[data-social-network=twitter] .like-count { background-image: url(../../img/like.png); background-size: 16px; }
+.network-post[data-social-network=twitter] .retweet-count { 
+    background-image: url(../../img/retweet.png); background-size: 16px; padding-left: 28px;
+}
+.network-post .post-warning { 
+    width: calc(100% - 10px); display: block; position: absolute; top: 0; height: auto; background-color: #fffab9; z-index: 1; font-size: 12px; line-height: 25px; text-align: center;padding: 5px;
+}
+.network-post .post-warning span { display: inline-block; width: 16px; height: 16px; vertical-align: middle; margin-right: 2px; line-height: 16px; }
+.network-post .post-warning img { width: 100%; top: -1px; }
+.album-icon {
+    background-image: url(../../img/white/album.png); position: absolute; width: 32px; height: 32px; background-position: center; top: 0; left: 0; display: none;
+}
+.network-post[data-album-post="1"] .album-icon { display: block; }
+.network-post .post-actions-overlay a { 
+    min-width: 172px; height: 36px; margin: 5px 0; display: block; border-radius: 16px; background-position: 5px center; background-size: 24px; cursor: pointer;
+    font-size: 15px; line-height: 36px; color: #000; padding: 0; text-align: left; background-color: #fff; text-indent: 38px;
+}
+.network-post .post-actions-overlay a[name=open-add-post-modal] { background-image: url(../../img/add.png); }
+.network-post .post-actions-overlay a[name=view-original-post] { background-image: url(../../img/export.png); background-size: 20px; }
+.network-post .post-actions-overlay a[name=hide-post-toggle] { background-image: url(../../img/hide.png); }
+.network-post .post-actions-overlay a[name=unhide-post-toggle] { background-image: url(../../img/preview.png); }
+.network-post[data-media-warning=true] a[name=open-add-post-modal] { display: none; }
+.network-post[data-post-status=draft] a[name=open-add-post-modal] { background-image: url(../../img/approved.png); }
+.network-post[data-post-status=publish] a[name=open-add-post-modal] { background-image: url(../../img/approved.png); }
+.network-post:hover .post-inner > img { opacity: 0.5; }
+.network-post:hover .post-inner > video { opacity: 0.5; }
+.network-post:hover .post-actions-overlay { opacity: 1.0; background-color: rgba(255, 255, 255, 0.5);  text-align: center; }
+.post-actions-cta-container { 
+    box-sizing: border-box; padding: 5px 10px; display: inline-block; vertical-align: middle; text-align: center; background-color: #fff; border-radius: 10px;
+    margin-top: 25px;
+ }
+.post-actions-cta-container a { box-sizing: border-box; vertical-align: middle; }
+.network-post .approved-icon { display: none; }
+.network-post[data-post-status=publish] .post-attributes-overlay { background-color: rgba(255,255,255,0.5); }
+.network-post[data-hidden-post=true] .post-attributes-overlay { background-color: rgba(255,255,255,0.5); }
+.network-post[data-post-status=publish] .post-title { opacity: 0.5; }
+.network-post[data-post-status=publish] .post-caption { opacity: 0.5; }
+.network-post[data-post-status=publish] .post-meta { opacity: 0.5; }
+.network-post[data-post-status=publish] .approved-icon {
+    background-image: url(../../img/white/approved.png); display: block; width: 64px; height: 64px; background-size: 64px; background-position: center; top: 100px; 
+    margin: 0 auto;
+}
+.network-post[data-hidden-post=true] .hidden-icon {
+    background-image: url(../../img/white/hide.png); display: block; width: 64px; height: 64px; background-size: 64px; background-position: center; top: 100px; 
+    margin: 0 auto;
+}
+.network-post .cache-icon {
+    background-image: url(../../img/cache.png); display: none; width: 60px; height: 20px; background-size: 80%; background-position: center; top: 10px; 
+    right: 5px; position: absolute;
+}
+.network-post[data-source=cache] .cache-icon { display: block; }
+blockquote.tiktok-embed { margin: 0; }
+blockquote iframe * { border-radius: 0; }
+
+
+/* SHARED CLASSES - SAVED POST & NETWORK POST */
+.post-inner { overflow: hidden; width: 100%; display: inline-block; vertical-align: top; font-size: 0; cursor: auto; max-height: 400px;}
+.post-inner img { height: auto; width: auto; }
+.post-attributes-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.post-actions-overlay { 
+    background-color: rgba(255, 255, 255, 0.5); opacity: 0; position: absolute; top: 0; left: 0; width: 100%; height: 100%; transition: all 0.3s ease;
+}
+.post-caption { padding: 5px; font-size: 12px; line-height: 16px; color: black; background-color: #fff; font-style: italic; box-sizing: border-box; }
+.post-caption p { 
+    -ms-word-break: break-all; word-break: break-word; -webkit-hyphens: auto; -moz-hyphens: auto; -webkit-box-orient: vertical; hyphens: auto; overflow: hidden; 
+    text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 3; margin-bottom: 0;
+}
+.post-grid .video-icon { height: 100%; }
+.post-meta { font-size: 12px; background-color: #fff; padding: 5px; }
+.post-meta-item { display: inline-block; padding-right: 15px; background-size: 14px; background-position: left center; padding-left: 20px; }
+
+
+
+
+
+
+

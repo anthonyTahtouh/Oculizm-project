@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <title>Header</title>
+    <style>
+        .logo {
+            height: 40px;
+        }
+        .nav-arrows {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            width: 80px;
+            right: 17px;
+        }
+        .nav-arrows button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: #333;
+            outline: none;
+        }
+        .nav-arrows button:disabled {
+            color: #aaa;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="nav-arrows">
+            <button id="backButton">&lt;</button>
+            <button id="forwardButton">&gt;</button>
+        </div>
+        <a href="index.html" target="_parent"><img src="images/soreto_logo.svg" alt="Soreto Logo" class="logo" /></a>
+    </div>
+
+    <script>
+        const navigationConfig = {
+            samsung: [
+                'samsung-homepage.htm',
+                'samsung-product-page.htm',
+                'samsung-cart.htm',
+                'samsung-checkout.htm',
+                'samsung-checkout-single-page.htm',
+                'samsung-confirmation-page.htm'
+            ],
+            
+            // Add more clients and their pages here when available
+        };
+
+        function getClientFromUrl(url) {
+            const urlParts = url.split('/');
+            const demoIndex = urlParts.indexOf('demo');
+            if (demoIndex !== -1 && demoIndex + 1 < urlParts.length) {
+                return urlParts[demoIndex + 1];
+            }
+            return null;
+        }
+
+        function getCurrentPage(url) {
+            const urlParts = url.split('/');
+            return urlParts[urlParts.length - 1];
+        }
+
+        function getPageIndex(client, page) {
+            return navigationConfig[client]?.indexOf(page);
+        }
+
+        function navigate(client, direction, url) {
+            const currentPage = getCurrentPage(url);
+            const pageIndex = getPageIndex(client, currentPage);
+
+            if (pageIndex !== -1) {
+                let newPageIndex = pageIndex + direction;
+                if (newPageIndex >= 0 && newPageIndex < navigationConfig[client].length) {
+                    const newPage = navigationConfig[client][newPageIndex];
+                    const newUrl = new URL(`/demo/${client}/${newPage}`, window.location.origin);
+                    try {
+                        parent.location.href = newUrl;
+                    } catch (error) {
+                        console.error('Navigation Error:', error);
+                    }
+                }
+            }
+        }
+
+        // Execute on page load
+        window.onload = function() {
+            const url = parent.location.href;
+            const client = getClientFromUrl(url);
+            const currentPage = getCurrentPage(url);
+
+            const backButton = document.getElementById('backButton');
+            const forwardButton = document.getElementById('forwardButton');
+
+            const currentPageIndex = getPageIndex(client, currentPage);
+
+            if (currentPageIndex === 0) {
+                backButton.disabled = true;
+            }
+
+            if (currentPageIndex === navigationConfig[client].length - 1) {
+                forwardButton.disabled = true;
+            }
+
+            backButton.addEventListener('click', () => {
+                navigate(client, -1, url);
+            });
+
+            forwardButton.addEventListener('click', () => {
+                navigate(client, 1, url);
+            });
+        };
+    </script>
+</body>
+</html>

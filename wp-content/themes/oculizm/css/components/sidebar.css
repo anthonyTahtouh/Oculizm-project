@@ -1,0 +1,66 @@
+.sidebar { 
+    width: 260px; padding: 70px 0 25px 0; box-sizing: border-box; position: fixed; overflow-y: scroll; min-height: 100vh;
+}
+.menu li { margin: 0; box-sizing: border-box; color: #000; height: auto; transition: all 0.3s ease; }
+.menu li .menu-item-group-name {
+    font-size: 14px; line-height: 34px; display: block; padding: 0 10px 0 48px; font-weight: 600; height: 34px;
+    background-position: 20px 9px; background-size: 16px; color: #000; opacity: 0.8;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-bottom: 0;cursor: pointer;
+}
+.menu > li > .menu-item-group-name::after {
+    content: ''; border: solid black; border-width: 0 1px 1px 0; padding: 4px; ransform: rotate(45deg); margin-right: 10px;
+    -webkit-transform: rotate(45deg);
+    display: block; float: right; margin-top: 15px; cursor: pointer;
+}
+.menu > li > .menu-item-group-name.open::after {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+.menu li a {
+    font-size: 14px; line-height: 34px; display: block; padding: 0 10px 0 48px; font-weight: 600; height: 34px;
+    background-position: 20px 8px; background-size: 16px; color: #000; opacity: 0.8;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap; 
+}
+.menu li.active > a { background-color: #fff; }
+.menu li ul li { text-indent: 24px; }
+.menu li ul li a { background-position: 90px center; background-size: 15px; padding-left: 38px; }
+.menu .profile-pic {
+    border-radius: 50%; width: 20px; height: 20px; background-size: cover; display: inline-block; top: -1px; left: -25px; 
+    vertical-align: middle; margin-right: 5px;
+}
+.menu li ul li a:hover { transition: all 0.3s ease; background-color: #fff; opacity: 1.0; }
+.menu > li > ul { margin-bottom: 0;display: none; }
+.menu > li > ul.active { display: block; }
+
+.menu .social-sub-menu { margin-bottom: 0; display: none; }
+.menu .social-sub-menu li { text-indent: 48px; }
+.menu .social-sub-menu li a { vertical-align: middle; font-weight: 400; }
+.sidebar-footer { width: 100%; color: #000; font-size: 11px; box-sizing: border-box; padding-left: 20px; }
+.sidebar-footer a { 
+    display: inline-block; text-decoration: underline; margin: 0 5px 10px 5px; text-decoration: none; text-transform: uppercase;
+}
+.sidebar-footer a { color: #000; }
+.label-new {
+    display: block; position: absolute; width: 36px; height: 17px; line-height: 17px; box-sizing: border-box; color: #ffffff; font-size: 10px;
+    background-color: #33aaff; border-radius: 3px; top: 10px; right: 10px; font-weight: 700; text-align: center; text-indent: 0;
+}
+
+/* main menu */
+li[name="analytics"] .menu-item-group-name { background-image: url(../../img/views.png);line-height: 34px;}
+li[name="posts"] .menu-item-group-name { background-image: url(../../img/galleries.png); }
+li[name="curate"] .menu-item-group-name { background-image: url(../../img/curate.png); }
+    li[name="facebook-photos"] a { background-image: url(../../img/photos.png); }
+    li[name="facebook-videos"] a { background-image: url(../../img/videos.png); }
+    li[name="facebook-reels"] a { background-image: url(../../img/reels.png); }
+    li[name="instagram-profile"] a { background-image: url(../../img/timeline.png); }
+    li[name="instagram-tags"] a { background-image: url(../../img/tagged.png); }
+    li[name="instagram-reels"] a { background-image: url(../../img/reels.png); }
+    li[name="instagram-stories"] a { background-image: url(../../img/stories.png); }
+    li[name="twitter-profile"] a { background-image: url(../../img/user.png); }
+    li[name="twitter-mentions"] a { background-image: url(../../img/mentions.png); }
+li[name="products"] .menu-item-group-name { background-image: url(../../img/products.png); }
+li[name="reviews"] .menu-item-group-name { background-image: url(../../img/reviews.png); }
+li[name="integration"] .menu-item-group-name { background-image: url(../../img/code.png); }
+li[name="settings"] .menu-item-group-name { background-image: url(../../img/options.png); }
+
+

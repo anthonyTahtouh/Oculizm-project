@@ -1,0 +1,456 @@
+
+/* GENERAL */
+#oclzm .oclzm-placeholder { width: 100%; text-align: center; font-size: 0; }
+#oclzm .oclzm-placeholder p { font-size: 15px; }
+#oclzm .oclzm-placeholder-images img { 
+	padding: 0; margin: 0; display: inline-block; width: 150px !important; box-sizing: border-box; vertical-align: top; 
+}
+#oclzm .post-grid-container { margin: 0 auto; text-align: center; padding: 0; }
+#oclzm .post-grid { margin: 0 0 50px 0; width: 100%; font-size: 0; text-align: left; display: flex; flex-wrap: wrap; }
+#oclzm .oclzm-footer { text-align: center; box-sizing: border-box; padding: 25px 10px; display: none; }
+.oculizm-credit { width: 120px !important; background-image: none !important; display: block !important; margin: 0 auto !important; }
+.oculizm-credit img { width: 100%; }
+
+/* gallery menu switcher */
+.oculizm-menu { margin-bottom: 25px; display: none; }
+.oculizm-menu ul { text-align: center; }
+.oculizm-menu li { display: inline-block; padding: 0 10px; }
+.oculizm-menu li.selected { font-weight: bold; text-decoration: underline; }
+
+
+/* GRID POST */
+#oclzm .oculizm-post { 
+	font-size: 16px; text-align: left; vertical-align: top; display: inline-block; box-sizing: border-box; position: relative; 
+	overflow: hidden; width: 25%; height: auto; padding: 0; margin: 0; border: 2px solid #ffffff; 
+}
+#oclzm .oculizm-post:before { content: ""; float:left; padding-top:100%; }
+#oclzm .oculizm-post:hover { cursor: pointer; }
+#oclzm .oculizm-post .oclzm-post-inner { position: absolute; top: 0; left: 0; height: 100%; width: 100%; }
+#oclzm .oclzm-img-holder { 
+	position:absolute; overflow: hidden; width: 100%; display: inline-block; vertical-align: top; display: flex; height: 100%;
+}
+#oclzm .oclzm-img-holder img { height: auto !important; width: 100% !important; max-width: 100%; object-fit: cover;margin-top: 0; margin-bottom: 0;  }
+#oclzm .oclzm-post-details { display: none; }
+#oclzm .oclzm-post-meta { font-size: 12px; margin-bottom: 20px; }
+#oclzm .oclzm-post-meta-item { display: inline-block; padding-right: 15px; }
+#oclzm .post-grid .vid-holder { height: 100%; }
+#oclzm .post-grid .video { display: block; margin: 0 auto; width: 100%; height: 100%; object-fit: cover; }
+#oclzm .oclzm-social-network {
+	display: none; position: absolute; vertical-align: top; box-sizing: border-box; width: 100%; height: 100%; 
+	cursor: pointer; text-align: center; background-color: rgba(0,0,0,0.66);pointer-events: none;
+}
+#oclzm .oclzm-social-network-icon {
+	width: 32px; height: 32px; background-repeat: no-repeat; cursor: pointer; display: inline-block; margin-top: 47%;
+	background-size: auto 96px; background-image: url(https://app.oculizm.com/static/social-icons.png); 
+}
+#oclzm .oclzm-social-network.null div { background-image: url(https://app.oculizm.com/static/search.png);background-size: 32px; }
+#oclzm .oclzm-social-network.instagram div { background-position: -161px -65px; }
+#oclzm .oclzm-social-network.facebook div { background-position: -3px -67px; }
+#oclzm .oclzm-social-network.twitter div { background-position: -23px -22px; }
+#oclzm .oclzm-social-network.pinterest div { background-position: -44px -22px; }
+#oclzm .oclzm-social-network.email div { background-position: -64px -22px; }
+#oclzm .oclzm-social-network.whatsapp div { background-position: -83px -22px; }
+
+#oclzm .oclzm-social-network { display: block; transition: opacity .35s;opacity: 0; }
+#oclzm .oculizm-post:hover .oclzm-social-network { opacity: 1 ; transition: opacity .35s; }
+
+
+
+/* NEW HYBRID SHOP SCRIPT */
+#oclzm .owl-stage-outer { z-index: 10; width: 100%; }
+#oclzm .owl-carousel .oculizm-post { width:  100%; }
+#oclzm .post-grid-container .owl-nav { position: absolute; top: 50%; left: 0; width: 100%; height: 25px;z-index: 10; }
+#oclzm .post-grid-container .owl-prev, #oclzm .post-grid-container .owl-next { font-size: 0; position: absolute; left: -22px; top: 0; width: 25px; height: 25px; }
+#oclzm .post-grid-container .owl-next { left: auto; right: -24px; }
+#oclzm .post-grid-container .owl-prev::before, #oclzm .post-grid-container .owl-next::before {
+    border-style: solid; border-width: 0.09em 0.09em 0 0; content: ""; display: inline-block; height: 0.45em; left: 0.15em; position: relative; top: 0.15em;
+    transform: rotate(45deg); vertical-align: top; width: 0.45em; font-size: 25px;
+}
+#oclzm .post-grid-container .owl-prev:before { left: 0.25em; transform: rotate(-135deg); }
+
+/* .oculizm-lightbox .viewer-right .owl-carousel .owl-item {max-width: 166px;} */
+.oculizm-lightbox .viewer-right .owl-carousel .owl-stage-outer{overflow: hidden !important;}
+
+
+/* GRID POST COVER */
+#oclzm .post-cover { 
+	width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); text-align: center; position: absolute; top: 0; left: 0;
+	z-index: 5; opacity: 0; transition: 0.3s; display: none;
+}
+#oclzm .post-cover:hover { opacity: 1; }
+#oclzm .post-cover-icon { 
+	margin: 37% auto 0 auto; width: 24px; height: 24px; background-size: 100%; background-repeat: no-repeat; display: block;
+}
+#oclzm .oculizm-post[data-feed-source=instagram] .post-cover-icon { background-image: url("https://app.oculizm.com/static/insta-trans.png"); }
+#oclzm .post-cover-text { 
+	color: #fff; text-transform: uppercase; display: inline-block; background: #000; padding: 4px 8px; margin-top: 5%;
+	font-size: 12px;
+}
+
+
+
+
+/* LIGHTBOX */
+.oculizm-lightbox {
+	position: fixed; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%; box-sizing: border-box; 
+	background: rgb(0 0 0 / 77%); text-align: center; overflow-y: scroll; padding: 20px;
+}
+.oculizm-lightbox .viewer-container { 
+ font-size: 0; margin: 25px auto; background: #ffffff; max-width: 1024px; letter-spacing: 0; 
+	box-shadow: rgb(0 0 0 / 20%) 0 0 20px;
+	max-height: 90vh;
+	display: flex;
+ flex-wrap: wrap;
+	/* min-width: 740px; */
+	min-width: 80vw;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: 10vh auto;
+}
+.oculizm-lightbox .viewer-left { 
+	font-size: 16px; text-align: center; box-sizing: border-box; 
+	max-height: 80vh;
+	max-width: 50%;
+ display: flex;
+}
+.oculizm-lightbox .viewer-left .main-video { 
+	position: relative; display: block; margin: 0 auto; width: 100%; height: auto; cursor: pointer; min-width: 312px;min-height: 512px;
+}
+.oculizm-lightbox .viewer-left .main-video-actual { 
+min-width: 312px;min-height: 512px;
+}
+.oculizm-lightbox .viewer-left .main-image .main-image-actual { display: block; margin: 0 auto; 
+	object-fit: cover;
+	/* width: initial !important; */
+}
+.oculizm-lightbox .viewer-left .main-image { 
+	margin: 0 auto; /*height: 100%;*/ width: auto; display: block; max-height: 80vh;
+}
+.oculizm-lightbox .viewer-left .main-video .video { display: block; margin: 0 auto; width: 100%; height: 100%; object-fit: cover; }
+.oculizm-lightbox .video-icon { 
+	position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-position: center center; background-size: 24px;
+	background-repeat: no-repeat; background-image: url(https://app.oculizm.com/static/video.png); display: none;
+}
+.oculizm-lightbox .viewer-left .hotspot-map { position: relative; }
+.oculizm-lightbox .viewer-left .hotspot-spots { position: absolute; top: 0; z-index: 5; }
+.oculizm-lightbox .viewer-left .hotspot { 
+	position: absolute; width: 16px; height: 16px; cursor: auto; background-image: url(https://app.oculizm.com/static/hotspot.png); 
+}
+.oculizm-lightbox .viewer-left .hotspot-label { position: absolute; width: 120px; height: auto; text-decoration: none; }
+.oculizm-lightbox .viewer-left .hotspot-label-text { 
+	background-color: #ffffff; padding: 7px; font-weight: bold; color: #000000; text-align: center; font-size: 11px; 
+	border-radius: 3px;
+}
+.oculizm-lightbox .viewer-right { 
+	font-size: 16px; display: flex; text-align: left; box-sizing: border-box;
+	position: relative;
+	flex: 1 1;
+	/* max-width: 50%; */
+}
+.oculizm-lightbox .viewer-right .viewer-right-inner { padding: 0 40px 0 40px; overflow-y: auto;width: 100%; }
+.oculizm-lightbox .viewer-right .product-list-title { 
+	margin: 20px 0; font-weight: bold; text-transform: uppercase; font-size: 20px; display: none; line-height: 14px;
+}
+.oculizm-lightbox .viewer-right .products { padding: 0; margin-bottom: 20px; box-sizing: border-box; }
+.oculizm-lightbox .viewer-right .oclzm-product { font-size: 11px; font-weight: 500;  text-align: center; }
+.oculizm-lightbox .viewer-right .oclzm-product img { width: 100%; height: auto; margin-bottom: 10px; }
+.oculizm-lightbox .oclzm-modal-img-holder,
+#oclzm .oclzm-modal-img-holder {
+	overflow: hidden; position: relative; margin-bottom: 10px;
+}
+.oculizm-lightbox .oclzm-modal-img-holder::before,
+#oclzm .oclzm-modal-img-holder::before {
+    content: ""; display: block; padding-top: 100%;
+}
+.oculizm-lightbox .oclzm-modal-img-holder-inner,
+#oclzm .oclzm-modal-img-holder-inner {
+	position: absolute; overflow: hidden; width: 100%; display: inline-block; vertical-align: top; display: flex; height: 100%;
+    top: 0;
+}
+.oculizm-lightbox .oclzm-modal-img-holder-inner img,
+#oclzm .oclzm-modal-img-holder-inner img {
+    height: 100% !important; width: 100% !important; max-width: 100%; object-fit: contain;
+}
+.carousel-center-class { display: flex !important; flex-direction: row; justify-content: center; }
+.oculizm-lightbox .viewer-right .product-name { width: auto; text-align: center; }
+.oculizm-lightbox .viewer-right .product-price { width: auto; text-align: center;}
+.oculizm-lightbox .viewer-right .product-price-strikeout { display: none; width: auto; text-align: center;}
+.oculizm-lightbox .viewer-right .oclzm-shop-now-btn { 
+	display: inline-block; padding: 5px 10px; color: #fff; background-color: #000; margin: 10px auto 5px auto; border-radius: 2px;
+	text-decoration: none;
+}
+.oculizm-lightbox .viewer-right .oclzm-post-caption { 
+	margin-top: 25px; text-align: justify; font-size: 10px; text-align: center; padding-top: 2%; padding-bottom: 2%; 
+	word-wrap: break-word;
+}
+.oculizm-lightbox .viewer-right .oclzm-post-meta { text-align: center; margin: 10px auto; padding: 0; }
+.oculizm-lightbox .viewer-right .oclzm-post-title { text-align: center; font-family: "Open Sans", Arial, sans-serif; margin-top: 5px; margin-bottom: 25px; }
+.oculizm-lightbox .viewer-right .oclzm-post-title span.title-prefix{display:none};
+
+/* labels , product-name and oclzm-post-caption line height fix */
+.oculizm-lightbox .viewer-left .hotspot-label {
+	line-height: 15px;
+}
+.oculizm-lightbox .viewer-right .product-name {
+	line-height: 15px;
+}
+.oculizm-lightbox .viewer-right .oclzm-post-caption {
+	line-height: 15px;
+}
+
+
+/* LIGHTBOX CLOSE BUTTON */
+.oculizm-lightbox .close { 
+	background-color: white; border-radius: 50%; position: absolute; width: 30px; height: 30px; display: block; 
+	top: 20px; right: 20px; z-index:99; 
+}
+.oculizm-lightbox .close:before, .oculizm-lightbox .close:after {
+	position: absolute; left: 14px; content: " "; height: 16px; width: 2px; background-color: #333; top: 7px; display: block;
+}
+.oculizm-lightbox .close:before { transform: rotate(45deg); }
+.oculizm-lightbox .close:after { transform: rotate(-45deg); }
+
+
+
+
+/* LIGHTBOX FOOTER */
+.oculizm-lightbox .share { 
+	line-height: 1.30; text-align: center;bottom: 0;display: block; height: 60px;width: 100%;
+	padding-top: 12px; position: absolute; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; 
+	padding-right: 5px;left: 0;
+}
+.oculizm-lightbox .share a {
+	display: inline-block; vertical-align: top; box-sizing: border-box; width: 16px; height: 16px; margin-right: 2px; 
+	margin-left: 2px; background-repeat: no-repeat; cursor: pointer; background-size: auto 61px;
+	background-image: url(https://app.oculizm.com/static/social-icons.png); 
+}
+.oculizm-lightbox .share .facebook { background-position: -3px -22px; }
+.oculizm-lightbox .share .twitter { background-position: -23px -22px; }
+.oculizm-lightbox .share .pinterest { background-position: -44px -22px; }
+.oculizm-lightbox .share .email { background-position: -64px -22px; }
+.oculizm-lightbox .share .whatsapp { background-position: -83px -22px; }
+
+.oculizm-lightbox .share a {
+	display: inline-block; vertical-align: top; box-sizing: border-box; width: 16px; height: 16px; margin-right: 2px; 
+	margin-left: 2px; background-repeat: no-repeat; cursor: pointer; background-size: auto 61px;
+	background-image: url(https://app.oculizm.com/static/social-icons.png); 
+}
+/* April 2023 Sean hid the share icons - I do not think they are used */
+.oculizm-lightbox .share div { display: none; }
+
+
+/* LIGHTBOX CAROUSEL */
+.oculizm-lightbox .prev-button { 
+	font-size: 0; position: fixed; top: 50%; width: 60px; height: 60px; left: 17px; cursor: pointer; z-index: 999; padding: 10px; 
+	color: white; box-shadow: rgb(0 0 0 / 20%) 0 0 20px; border-radius: 50%; box-sizing: border-box;
+}
+.oculizm-lightbox .next-button { 
+	font-size: 0; position: fixed; top: 50%; width: 60px; height: 60px; right: 17px; cursor: pointer; z-index: 999; padding: 10px; 
+	box-shadow: rgb(0 0 0 / 20%) 0 0 20px; border-radius: 50%; color:white; box-sizing: border-box;
+}
+.oculizm-lightbox .prev-button::before {
+	border-style: solid; border-width: 0.15em 0.15em 0 0; content: ""; display: inline-block; height: 23px; position: relative;
+	top:  8px; vertical-align: top; width: 23px; font-size: 30px; left: 3px; transform: rotate(-135deg); opacity:0.5;
+	box-sizing: border-box; border-color: #fff;
+}
+.oculizm-lightbox .next-button::before {
+	border-style: solid; border-width: 0.15em 0.15em 0 0; content: ""; display: inline-block; height: 23px; position: relative;
+	top:  8px; vertical-align: top; width: 23px; font-size: 30px; left: -3px; transform: rotate(45deg); opacity: 0.5;
+	box-sizing: border-box; border-color: #fff;
+}
+
+/* LIGHTBOX PRODUCT CAROUSEL */
+.oculizm-lightbox .owl-nav { position: absolute; top: 40%; left: 0; width: 100%; height: 0; }
+.oculizm-lightbox .owl-prev, 
+.oculizm-lightbox .owl-next { 
+	opacity: 0.3; font-size: 0; position: absolute; left: auto; right: -27px; top: 0; width: 25px; height: 25px; 
+}
+.oculizm-lightbox .owl-prev.disabled, 
+.oculizm-lightbox .owl-next.disabled { 
+	display: none;
+}
+.oculizm-lightbox .owl-prev { left: -20px; }
+.oculizm-lightbox .owl-prev::before, 
+.oculizm-lightbox .owl-next::before {
+	border-style: solid; border-width: 0.09em 0.09em 0 0; content: ""; display: inline-block; height: 0.45em; left: 0;
+	position: relative; top: 0.15em; transform: rotate(-45deg); vertical-align: top; width: 0.45em; font-size: 25px;
+}
+.oculizm-lightbox .owl-next:before { transform: rotate(45deg); }
+.oculizm-lightbox .owl-prev:before { left: 0.25em; transform: rotate(-135deg); }
+
+
+
+
+/* LOAD MORE */
+#oclzmLoadMore {
+	margin: 50px auto; width: 80px; height: 80px; border: 2px solid #000000; border-radius: 40px; text-align: center;
+	box-sizing: border-box; cursor: pointer; display: none;
+}
+#oclzmLoadMore div { width: 25px; height: 25px; margin: 25px 0 0 25px; }
+#oclzmLoadMore div::before {
+	border-style: solid; border-width: 0.09em 0.09em 0 0; content: ""; display: inline-block; height: 0.45em; left: 0.15em;
+	position: relative; top: 0.15em; transform: rotate(-45deg); vertical-align: top; width: 0.45em; font-size: 25px;
+}
+#oclzmLoadMore div:before { left: 0; transform: rotate(135deg); }
+
+
+
+
+/* REVIEW FORM */
+.oculizm-review-form {
+	position: fixed; top: 0; left: 0; bottom: 0; right: 0; width: 100%; height: 100%; box-sizing: border-box; 
+	background: rgb(0 0 0 / 77%); text-align: center; overflow-y: scroll; padding: 20px; z-index: 1100;
+}
+.orf-container {
+	font-size: 0;background: #fff;width: 640px;letter-spacing: 0;box-sizing: border-box;padding: 25px;
+	box-shadow: rgb(0 0 0 / 20%) 0 0 20px;position: relative;margin: 10vh auto;text-align: center;margin-top: 5vh;}
+.orf-header { box-sizing: border-box; display: block; width: 100%; font-size: 18px; }
+.orf-title { font-size: 22px; margin-top: 20px; font-weight: 500; }
+.orf-description { margin: 20px auto; }
+.orf-product { display: none; padding: 10px; }
+.orf-product .orf-image { 
+	display: inline-block; width: 140px; height: auto; margin: 0 10px; vertical-align: middle; box-sizing: border-box; 
+}
+.orf-product img { max-width: 100%; }
+.orf-product .orf-product-title { 
+	display: inline-block; margin: 10px 10px 20px 10px; vertical-align: middle; font-weight: bold;
+}
+.orf-body { box-sizing: border-box; display: block; width: 100%; font-size: 18px; }
+.orf-label { font-weight: bold; font-size: 15px; margin-top: 10px; }
+.orf-container .orf-body input { 
+	border: 1px solid #ddd; border-radius: 5px; font-size: 16px; margin: 10px auto; box-sizing: border-box; padding: 10px;
+	outline: none; width: 100%; max-width: 100%;
+}
+.orf-container .orf-body textarea { 
+	border: 1px solid #ddd; border-radius: 5px; font-size: 16px; margin: 10px auto; box-sizing: border-box; padding: 10px;
+	outline: none; width: 100%; max-width: 100%; height: 120px; 
+}
+.orf-stars { margin: 25px auto; }
+.orf-star { display: inline-block; height: 50px; width: 50px; cursor: pointer; box-sizing: border-box; }
+.orf-star i {
+	clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    background-color: #ddd; display: block; height: 50px; width: 50px; cursor: pointer;
+}
+.orf-star.active i { background-color: gold; }
+.orf-footer { box-sizing: border-box; display: block; width: 100%; font-size: 18px; }
+.orf-cta a[name=submit-orf] {
+	background-color: #000; display: inline-block; line-height: 34px; height: 34px; color: #fff; text-align: center;
+	border-radius: 20px; cursor: pointer; padding: 0px 20px; font-weight: 500; font-size: 15px; margin-bottom: 32px;
+	box-sizing: border-box; text-decoration: none;
+}
+
+/* REVIEW FORM CLOSE BUTTON */
+.oculizm-review-form .close { 
+	background-color: white; border-radius: 50%; position: absolute; width: 30px; height: 30px; display: block; 
+	top: 20px; right: 20px; z-index:99; 
+}
+.oculizm-review-form .close:before, .oculizm-review-form .close:after {
+	position: absolute; left: 14px; content: " "; height: 16px; width: 2px; background-color: #333; top: 7px; display: block;
+}
+.oculizm-review-form .close:before { transform: rotate(45deg); }
+.oculizm-review-form .close:after { transform: rotate(-45deg);}
+
+
+
+/* LOADER */
+.oclzm-loader {
+	font-size: 10px; margin: 50px auto; text-indent: -9999em; width: 80px; height: 80px; border-radius: 50%; background: #000000;
+	position: relative; opacity: 1.0;
+	-webkit-animation: load3 1.4s infinite linear;
+	animation: load3 1.4s infinite linear;
+	-webkit-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+	background: -moz-linear-gradient(left, #000000 10%, rgba(0, 0, 0, 0) 50%);
+	background: -webkit-linear-gradient(left, #000000 10%, rgba(0, 0, 0, 0) 50%);
+	background: -o-linear-gradient(left, #000000 10%, rgba(0, 0, 0, 0) 50%);
+	background: -ms-linear-gradient(left, #000000 10%, rgba(0, 0, 0, 0) 50%);
+	background: linear-gradient(to right, #000000 10%, rgba(0, 0, 0, 0) 50%);
+}
+.oclzm-loader:before {
+	width: 50%; height: 50%; background: #000000; border-radius: 100% 0 0 0; position: absolute; top: 0; left: 0; content: "";
+}
+.oclzm-loader:after {
+	background: #ffffff; width: 94%; height: 94%; border-radius: 50%; content: ""; margin: auto; position: absolute; 
+	top: 0; left: 0; bottom: 0; right: 0;
+}
+
+
+
+
+
+/* ANIMATION */
+@-webkit-keyframes load3 {
+	0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+@keyframes load3 {
+	0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+
+
+
+
+
+
+
+/* RESPONSIVE */
+@media all and (max-width: 1149px) {
+	#oclzm .oculizm-post { width: 25%; }
+}
+@media all and (max-width: 1023px) {
+	#oclzm .oculizm-post { width: 25%; }
+}
+@media all and (max-width: 767px) {
+
+	/* general */
+	#oclzm .oculizm-post { width: 50%; }
+	
+	/* lightbox */
+	/* small screen smaller product images */
+	.oculizm-lightbox .viewer-right .oclzm-product{width:50%;margin: 0 auto;}
+	.oculizm-lightbox .viewer-container { margin: 0 auto; max-height: inherit;display: flex;min-width: auto;bottom: auto;}
+	.oculizm-lightbox .viewer-left { max-height: inherit; width:100%; max-width: 100%;display: flex;position: relative;}
+	.oculizm-lightbox .viewer-left .hotspot-label { display: none !important; }
+	.oculizm-lightbox .viewer-left .main-image { max-height: none; }
+	.oculizm-lightbox .viewer-right { width:100%; padding: 0 10px 0 10px;display: flex;flex-wrap: wrap;max-width: 100%; }
+	.oculizm-lightbox .viewer-right .oclzm-post-meta { overflow: hidden; }
+	.oculizm-lightbox .viewer-right .owl-carousel { width:100% !important; margin-left: 0px; padding-top: 5%;}
+	.oculizm-lightbox .viewer-right .oclzm-post-caption { display:none; }
+	.oculizm-lightbox .credit { display:none; }
+	.oculizm-lightbox .share { position: relative; margin-left: 0; }
+	.oculizm-lightbox .share { border-top: 0px  !important; }
+	.oculizm-lightbox .close { top: 15px; right: 15px; position: fixed;}
+
+	/* lightbox carousel */
+	.oculizm-lightbox .prev-button {top: calc(20% - 30px);left:0}
+ .oculizm-lightbox .next-button {top: calc(20% - 30px);right: 0;}
+	
+.oculizm-lightbox .prev-button::before,
+.oculizm-lightbox .next-button::before {
+	opacity: 1;
+}
+	.oculizm-lightbox .viewer-right .viewer-right-inner { padding: 0 20px 0 20px; width: 100%;}
+
+#oclzm .post-grid-container .owl-prev {left: 0px; }
+#oclzm .post-grid-container .owl-next {right: 0px; }
+}
+/* Responsive Reviews Form */
+@media all and (max-width: 767px) {
+	.orf-container {max-width: 640px; width: auto;}
+	.orf-star {height: 30px;width: 30px;}
+	.orf-star i {height: 30px;width: 30px;}
+	.orf-description {margin: 15px auto;hyphens: none;}
+	.orf-title {font-size: 20px;}
+	 #oclzm .owl-carousel .oculizm-post{
+		width: calc(100% - 40px);
+	  height: calc(100% - 40px);
+	  margin-left: 20px;
+	 }
+	}
+

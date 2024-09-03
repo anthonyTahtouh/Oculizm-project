@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+	<title>As Seen On Inject</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<!-- <link rel="stylesheet" href="css/slick.1.3.15.css"> -->
+	<link rel="stylesheet" href="css/slick.1.6.0.css">
+	<link rel="stylesheet" href="css/bx-slider.css">
+</head>
+<body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<!-- <script src="js/slick.1.3.15.min.js"></script> -->
+	<script src="js/slick.1.6.0.min.js"></script>
+	<script src="js/flickity.js"></script>
+	<script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+	<!-- <script src="inject.js"></script> -->
+	
+
+	<script id='oculizm_script'>
+		var OCULIZM_PARENT=jQuery('script#oculizm_script').parent();
+		OCULIZM_PARENT.append('<div id="oclzmAsSeenOn"></div>');
+		jQuery.getScript('http://localhost/oculizm/wp-content/uploads/2063_as-seen-on.js',function(script,textStatus,jqXHR ){
+		  if(textStatus==='success') jQuery('#oclzmAsSeenOn').oculize({	clientID:2063,	oculizmServer: 'http://localhost/oculizm',	productID: 'WWS11349080A',}); 
+		});
+	</script>
+		
+		<script src='http://localhost/oculizm/wp-content/uploads/2063_tracking.js'></script>
+
+
+	</div>
+</body>
+</html>

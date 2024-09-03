@@ -1,0 +1,28 @@
+<html lang="en">
+<head>
+	<title>Carousel Inject</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js" integrity="sha256-C6CB9UYIS9UJeqinPHWTHVqh/E1uhG5Twh+Y5qFQmYg=" crossorigin="anonymous"></script>
+	<script src="js/owl.carousel.min.js"></script>
+</head>
+<body>
+	
+
+	<div style="width:1200px;margin:auto">
+<div class="oculizm-carousel" id="oclzmCrsl"></div>
+<script id='oculizm_script'>
+	var OCULIZM_PARENT=jQuery('script#oculizm_script').parent();
+	OCULIZM_PARENT.append('<div id="oclzmCrsl"></div>');
+	jQuery.getScript('http://localhost/oculizm/wp-content/uploads/2063_29_carousel.js',function(script,textStatus,jqXHR ){
+	  if(textStatus==='success') jQuery('#oclzmCrsl').oculize({	clientID:2063,	oculizmServer: 'http://localhost/oculizm',	galleryID:29}); 
+	});
+</script>
+	
+<script src='http://localhost/oculizm/wp-content/uploads/2063_tracking.js'></script>
+
+	</div>
+</body>
+</html>

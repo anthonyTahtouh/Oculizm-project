@@ -1,0 +1,39 @@
+.login form {
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.login form input[type=text], .login form input[type=password] {
+	border: 0;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	background-color: #eeeeee;
+	padding: 10px;
+	font-size: 20px;
+}
+h1 a { 
+	background-image: url(../img/oculizm-logo-black.png) !important; 
+	width: 200px !important; 
+	height: 41px !important; 
+	background-size: 200px !important;
+	margin-top: 50px !important;
+}
+.login .button-primary, .login .button-primary:hover {
+	display: block !important;
+    background:none !important;
+    text-shadow: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    background-color: #44dd88 !important;
+    width: 100% !important;
+    margin-top: 20px !important;
+}
+.wp-core-ui .button.button-large {
+	height: auto;
+	padding: 7px 0;
+	text-transform: uppercase;
+}
+#backtoblog, #nav { display:none; }
+.login #login_error, .login .message { border-color: #ff5577; }
+.language-switcher { display: none; }

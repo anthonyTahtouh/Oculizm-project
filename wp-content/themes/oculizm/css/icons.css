@@ -1,0 +1,197 @@
+
+/* loader */
+.loader {
+	position: relative; left: -9999px; width: 10px; height: 10px; border-radius: 5px; background-color: #cccccc; color: #cccccc; box-shadow: 9999px 0 0 -5px;
+	animation: loader 1.5s infinite linear; animation-delay: 0.25s; margin: 30px auto;
+}
+.loader::before, 
+.loader::after {
+	content: ""; display: inline-block; position: absolute; top: 0; width: 10px; height: 10px; border-radius: 5px; background-color: #cccccc; color: #cccccc;
+}
+.loader::before { box-shadow: 9984px 0 0 -5px; animation: loader-before 1.5s infinite linear; animation-delay: 0s; }
+.loader::after { box-shadow: 10014px 0 0 -5px; animation: loader-after 1.5s infinite linear; animation-delay: 0.5s; }
+
+@keyframes loader-before {
+	0% {
+		box-shadow: 9984px 0 0 -5px;
+	}
+	30% {
+		box-shadow: 9984px 0 0 2px;
+	}
+	60%, 100% {
+		box-shadow: 9984px 0 0 -5px;
+	}
+}
+@keyframes loader {
+	0% {
+		box-shadow: 9999px 0 0 -5px;
+	}
+	30% {
+		box-shadow: 9999px 0 0 2px;
+	}
+	60%, 100% {
+		box-shadow: 9999px 0 0 -5px;
+	}
+}
+@keyframes loader-after {
+	0% {
+		box-shadow: 10014px 0 0 -5px;
+	}
+	30% {
+		box-shadow: 10014px 0 0 2px;
+	}
+	60%, 100% {
+		box-shadow: 10014px 0 0 -5px;
+	}
+} 
+
+
+/* load more */
+.load-more { width: 100%; text-align: center; height: 100px; display: none; }
+.load-more-button { display: block; width: 64px; height: 64px; background-color: #fff; border-radius: 36px; margin: 0 auto; opacity: 1.0; transition: all 0.3s ease; }
+.load-more-button:hover { opacity: 0.5; }
+.load-more-button.chevron.chevron-down:before { margin-left: 0; top: 33%; }
+
+
+/* close */
+.close { position: absolute; top: 0; right: 0; width: 32px; height: 32px; display: block; }
+.close:before { position: absolute; left: 15px; top: 8px; content: ' '; height: 16px; width: 2px; background-color: #333; transform: rotate(45deg); }
+.close:after { position: absolute; left: 15px; top: 8px; content: ' '; height: 16px; width: 2px; background-color: #333; transform: rotate(-45deg); }
+
+
+/* chevron */
+.chevron::before { 
+	border-style: solid; border-width: 2px 2px 0 0; content: ''; display: inline-block; height: 0.45em; position: relative; top: 0.15em; vertical-align: top; 
+	width: 0.45em; 
+}
+.chevron.chevron-down:before { 
+	top: 3px; transform: rotate(135deg); display: flex; margin-left: 7px; cursor:pointer; display: inline-block; height: 16px; width: 16px; 
+}
+.chevron.chevron-up:before { 
+	top: 13px; transform: rotate(-45deg); display: flex;margin-left: 7px; cursor:pointer; display: inline-block; height: 16px; width: 16px; 
+}
+.chevron.chevron-left:before { transform: rotate(-135deg); display: flex; cursor:pointer; display: inline-block; height: 16px; width: 16px; }
+.chevron.chevron-right:before { transform: rotate(45deg); display: flex; cursor:pointer; display: inline-block; height: 16px; width: 16px; }
+
+
+/* left arrow */
+.nav-left { color: #000000; font-size: 14px; padding: 10px 20px; display: inline-block; margin: 10px 0; cursor: pointer; }
+.nav-left:hover { opacity: 0.7; }
+.nav-left .chevron { margin-right: 5px; }
+.nav-left .chevron.chevron-left:before { margin-right: 5px; top: 5px; width: 8px; height: 8px; }
+.content-block .nav-left { margin: 25px 0 0 0; }
+
+
+/* label */
+.label-icon { 
+	display: block; background-image: url(../img/label.png); background-size: 24px; text-align: center; background-position: center center; float: left; 
+	margin: 5px; width: 32px; border-radius: 50%; height: 32px; box-sizing: border-box;
+}
+.label-icon span { left: 1px; font-weight: 600; line-height: 34px; font-size: 10px; top: 1px; }
+
+
+/* switch */
+.switch { font-size: 0; width: 100%; color: #ffffff; margin-bottom: 18px;}
+.switch-track { display: inline-block; background-color: #000000; height: 28px; border-radius: 14px; width: 50px; vertical-align: top; cursor: pointer; }
+.switch-lever { display: inline-block; background-color: #333333; height: 20px; border-radius: 10px; width: 20px; vertical-align: top; margin: 4px; }
+.switch-label { display: inline-block; height: 28px; font-size: 14px; vertical-align: top; padding: 0 10px; line-height: 25px; }
+.switch[name="custom-ordering"] {width: 100%;margin-bottom: 25px;}
+.switch[name="custom-ordering"] .switch-label{color: black;width: auto;}
+.switch[name="custom-ordering"] .switch-track{background-color: #eee;}
+.switch[name="custom-ordering"] .switch-lever{background-color: white;}
+.switch[data-status="true"] .switch-track { text-align: right; }
+.switch[name="custom-ordering"][data-status="true"] .switch-lever { background-color: #333; }
+.switch[name="custom-ordering"] .switch-description{padding-left: 20px;font-size: 14px;}
+
+/* external link */
+.external-link {
+    display: inline-block; background-image: url(../img/export.png); background-size: 20px; border: 1px solid #000; border-radius: 4px; color: #000;
+    font-size: 14px; padding: 8px 10px 8px 36px; font-weight: 600; background-position: 10px center;
+}
+
+
+/* rich buttons */
+.rich-button {
+    z-index: 1; position: absolute; right: 10px; text-transform: uppercase; vertical-align: bottom; top: 10px; background-color: #fff; cursor: pointer;
+    background-size: 25px; background-position: center 10px; width: 72px; height: 32px; text-align: center; border: none; padding-top: 40px; 
+}
+.content-block-menu .header-button { 
+    top: 25px; padding-right: 25px; font-size: 14px; line-height: 14px; cursor: pointer; background-image: url(../img/edit.png); background-size: 12px; 
+    background-position: left center; padding-left: 19px; position: relative; right: 0;
+}
+
+
+/* copy button */
+.button-copy {
+    display:inline-block; margin: 10px; cursor: pointer; background-image: url('../img/copy.png'); width: 32px; height: 32px; background-size: 24px; 
+    background-position: center center;
+}
+
+
+/* video icon */
+.video-icon { 
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-position: center center; background-size: 40px; 
+    background-image: url(../img/white/play.png);
+}
+
+
+/* heading icons */
+h2.h2-icon { display: inline-block; margin-right: 10px; background-size: 30px; padding-left: 50px; background-position: left center; }
+h3.h3-icon { display: inline-block; margin-right: 10px; background-size: 24px; padding-left: 40px; background-position: left center; }
+
+
+/* mini icons */
+.mini-icon { background-size: 100%; width: 20px; height: 20px; display: inline-block; }
+table[name=user-journey] .mini-icon { width: 24px; height: 24px; }
+table[name=manageClients] .mini-icon { width: 24px; height: 24px; border-radius: 50%; margin: 0 4px; vertical-align: top; background-size: 100%; }
+.mini-icon[name=gallery-viewed] { background-image: url('../img/preview.png'); }
+.mini-icon[name=load-more] { background-image: url('../img/preview-load-more.png'); }
+.mini-icon[name=widget-scrolled] { background-image: url('../img/scrolled.png'); }
+.mini-icon[name=order] { background-image: url('../img/orders.png'); }
+.mini-icon[name=deep-interaction] { background-image: url('../img/interactions.png'); }
+.mini-icon[name=multiple-orders] { background-image: url('../img/multiple-orders.png'); }
+.mini-icon[data-social-network=facebook] { background-image: url(../img/social/facebook.png); background-size: 16px; background-color: #3876ea; background-position: 25% 50%; }
+.mini-icon[data-social-network=instagram] { background-image: url(../img/social/instagram.png); background-size: 16px; }
+.mini-icon[data-social-network=tiktok] { background-image: url(../img/social/tiktok.png); background-size: 20px; }
+.mini-icon[data-social-network=twitter] { background-image: url(../img/social/x.png); background-size: 20px; background-color: #000; }
+
+
+/* user agent icons */
+.user-agent span[name="Android"] { background-image: url('../img/user-agent/android.png'); }
+.user-agent span[name="Windows"] { background-image: url('../img/user-agent/windows.png'); }
+.user-agent span[name="iOS"] { background-image: url('../img/user-agent/apple.png'); }
+.user-agent span[name="Mac OS"] { background-image: url('../img/user-agent/apple.png'); }
+.user-agent span[name="Chrome"], .user-agent span[name="chrome"]  { background-image: url('../img/user-agent/chrome.png'); }
+.user-agent span[name="Chrome WebView"], .user-agent span[name="Chrome webView"] { background-image: url('../img/user-agent/chrome.png'); }
+.user-agent span[name="Chromium OS"] { background-image: url('../img/user-agent/chromium.png'); }
+.user-agent span[name="Edge"], .user-agent span[name="edge"] { background-image: url('../img/user-agent/edge.png'); }
+.user-agent span[name="Safari"], .user-agent span[name="safari"] { background-image: url('../img/user-agent/safari.png'); }
+.user-agent span[name="Firefox"] , .user-agent span[name="firefox"]{ background-image: url('../img/user-agent/firefox.png'); }
+.user-agent span[name="Mobile Safari"] { background-image: url('../img/user-agent/safari.png'); }
+.user-agent span[name="Samsung Browser"] { background-image: url('../img/user-agent/samsung.png'); }
+.user-agent span[name="Instagram"] { background-image: url('../img/user-agent/instagram.png'); }
+.user-agent span[name="GSA"] { background-image: url('../img/user-agent/google.png'); }
+.user-agent span[name="Facebook"] { background-image: url('../img/user-agent/facebook.png'); }
+
+
+/* payment icons */
+.user-agent span[name="Amazon Payments"] { background-image: url('../img/payment/amazon-pay.png'); padding-left: 25px; }
+.user-agent span[name="Apple Pay"] { background-image: url('../img/payment/apple-pay.png'); padding-left: 28px; }
+.user-agent span[name="Credit/Debit Card"] { background-image: url('../img/payment/credit-card.png'); padding-left: 25px; }
+.user-agent span[name="G Pay"] { background-image: url('../img/payment/g-pay.png'); padding-left: 25px; }
+.user-agent span[name="Klarna"] { background-image: url('../img/payment/klarna.png');padding-left: 32px;}
+.user-agent span[name="PayPal Express"] { background-image: url('../img/payment/paypal.png'); padding-left: 24px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+	<title>Grid</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="aso.css">
+</head>
+<body>
+	<script src="jquery.js"></script>
+
+	<div class="oculizm-menu">
+		<ul>
+			<li class="selected" data-gallery-id="197"><a href="#">All</a></li>
+			<li data-gallery-id="208"><a href="#">Kitchen & Dining Room</a></li>
+			<li data-gallery-id="209"><a href="#">Shelves</a></li>
+			<li data-gallery-id="210"><a href="#">Mantel</a></li>
+			<li data-gallery-id="211"><a href="#">Living Room</a></li>
+			<li data-gallery-id="212"><a href="#">Bedroom</a></li>
+			<li data-gallery-id="213"><a href="#">Outdoor</a></li>
+		</ul>
+	</div>
+
+	<div class="oculizm-gallery-content">
+		<script id='oculizm_grid_script'>
+		document.addEventListener('DOMContentLoaded', function load() {if (!window.jQuery) return setTimeout(load, 50);
+			var OCULIZM_Grid_PARENT=jQuery('script#oculizm_grid_script').parent();
+			OCULIZM_Grid_PARENT.append('<div id="oclzm"></div>');
+			jQuery.getScript('https://app.oculizm.com/wp-content/uploads/71950_197_grid.js',function(script,textStatus,jqXHR ){
+				if(textStatus==='success') jQuery('#oclzm').oculize({   region: ''}); 
+			});
+		}, false);
+		</script>
+
+	</div>
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,62 @@
+<html lang="en">
+
+<head>
+	<title>Grid</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="aso.css">
+	<link rel="stylesheet" href="reviews.css">
+</head>
+
+<body>
+	<script src="jquery.js"></script>
+
+	<style>
+		#oclzmReviews {
+			margin: 0 auto;
+			max-width: 1200px;
+			direction: ltr;
+		}
+
+		.oculizm-credit {
+			width: 120px !important;
+			background-image: none !important;
+			display: block !important;
+			margin: 0 auto !important;
+		}
+
+		.oculizm-credit img {
+			width: 100%;
+		}
+	</style>
+
+	<!-- Oculizm shop widget tag start -->
+	<!-- <script id="oculizm_grid_script">
+		document.addEventListener('DOMContentLoaded', function load() {
+			if (!window.jQuery) return setTimeout(load, 50);
+			var OCULIZM_Grid_PARENT = jQuery('script#oculizm_grid_script').parent();
+			OCULIZM_Grid_PARENT.append('<div id="oclzm"></div>');
+			jQuery.getScript('https://app.oculizm.com/wp-content/uploads/77974_198_grid.js', function (script, textStatus, jqXHR) {
+				if (textStatus === 'success') jQuery('#oclzm').oculize({ region: '', carousel: 'true' });
+			});
+		}, false);
+	</script> -->
+	<!-- Oculizm shop widget tag end -->
+
+	<!-- Oculizm reviews widget tag start -->
+	<script id='oculizm_reviews_script'>
+		document.addEventListener('DOMContentLoaded', function load() {
+			if (!window.jQuery) return setTimeout(load, 50);
+			var OCULIZM_Reviews_PARENT = jQuery('script#oculizm_reviews_script').parent();
+			OCULIZM_Reviews_PARENT.append('<div id="oclzmReviews"></div>');
+			jQuery.getScript('https://app.oculizm.com/wp-content/uploads/77974_reviews.js', function (script, textStatus, jqXHR) {
+				if (textStatus === 'success') jQuery('#oclzmReviews').init_oculizm_reviews_widget({ region: 'null', type: 'site_reviews' , carousel:'true' });
+			});
+		}, false);
+	</script>
+	<!-- Oculizm reviews widget tag end -->
+
+
+</body>
+
+</html>

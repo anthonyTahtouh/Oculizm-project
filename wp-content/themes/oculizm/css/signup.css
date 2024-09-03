@@ -1,0 +1,126 @@
+
+
+.corp-header { width: 100%; height: 104px; background-color: #000000; box-sizing: border-box; padding-top: 38px; }
+.corp-header-inner { max-width: 1140px; margin: 0 auto; }
+.signup-page h1 { padding: 25px 0 0 0; font-size: 26px; letter-spacing: 0; font-weight: 600; text-transform: none; }
+.signup-description { padding: 10px 0 25px 0; font-size: 16px; font-weight: 600; color: #666; }
+.signup-page .content-block { max-width: 1140px; margin: 0 auto 25px auto; box-shadow: none; }
+.signup-page a.register-oculizm-logo {
+    background-image: url(https://oculizm.com/wp-content/uploads/2020/05/OculizmLogoWithTM-102-white.png);
+    width: 102px ;
+    height: 22px ;
+    background-size: 102px ;
+    display: block;
+}
+.signup-page .forminator-ui#forminator-module-67693.forminator-design--flat .forminator-label { font-size:14px; margin-bottom: 12px; }
+.signup-page .forminator-ui#forminator-module-67693.forminator-design--flat .forminator-input {
+    max-width: 320px; border-radius: 5px; font-size: 18px; padding: 10px;
+}
+.signup-page .forminator-ui#forminator-module-67693.forminator-design--flat .forminator-input::placeholder { font-size: 18px; }
+.signup-page .forminator-ui#forminator-module-67693.forminator-design--flat .forminator-button-back {
+    color: #ffffff; padding: 5px 16px; font-size: 14px; display: inline-block; text-align: center; margin: 10px 0; cursor: pointer; border: 1px solid #111111;
+    border-radius: 15px; font-weight: 600; background-color: #111111;
+}
+.signup-page .forminator-ui#forminator-module-67693.forminator-design--flat .forminator-button-next {
+    color: #ffffff; padding: 5px 16px; font-size: 14px; display: inline-block; text-align: center; margin: 10px 0; cursor: pointer; border: 1px solid #111111;
+    border-radius: 15px; font-weight: 600; background-color: #111111;
+}
+.signup-page .forminator-ui#forminator-module-67693.forminator-design--flat .forminator-button-submit {
+    color: #ffffff; padding: 5px 16px; font-size: 14px; display: inline-block; text-align: center; margin: 10px 0; cursor: pointer; border: 1px solid #111111;
+    border-radius: 15px; font-weight: 600; background-color: #111111;
+}
+.signup-page .forminator-ui#forminator-module-67693.forminator-design--flat .forminator-button-back:hover {
+    background-color: #111111; color: #ffffff;
+}
+.signup-page .forminator-ui#forminator-module-67693.forminator-design--flat .forminator-button-back:focus {
+    background-color: #111111; color: #ffffff;
+}
+.signup-page .forminator-ui#forminator-module-67693.forminator-design--flat .forminator-button-next:hover {
+    background-color: #111111; color: #ffffff;
+}
+.signup-page .forminator-ui#forminator-module-67693.forminator-design--flat .forminator-button-submit:hover {
+    background-color: #111111; color: #ffffff;
+}
+.package { vertical-align: top; }
+.package-header { box-sizing: border-box; padding: 5px 10px; height: 53px; margin: 0 auto -15px auto; }
+.package-body { border-radius: 25px; padding: 20px; overflow: hidden; background-color: #ffffff; cursor: pointer; }
+.package-price-figure { display: inline-block; font-size: 32px; padding-right:5px; text-decoration: line-through; color: #666; }
+.package-price-figure-sale { display: inline-block; font-size: 44px; padding-right:5px; }
+.package-price-term { display: inline-block; width: 60px; }
+.package-name { font-size: 20px; padding-bottom: 15px; }
+.package-includes { margin-bottom: -12px; font-size: 13px; }
+.package-main ul li { font-size: 13px; margin: 10px 0 0 20px; }
+
+/* hide some form labels */
+.forminator-ui.forminator-custom-form[data-design="flat"] .forminator-field-html .forminator-label { display: none; }
+#radio-1 > .forminator-field > .forminator-label { display: none; }
+
+/* package-specific  styles */
+.package-2 .package-header { 
+    color: #000000; background-color: #ddffdd; border-radius: 13px; font-weight: bold; text-align:center; width: 80%; padding: 10px 0 24px 0; 
+    font-style: italic;
+}
+.package-body { background-color: #ffffff; border: 5px solid #ddffdd; box-sizing: border-box; }
+.unselected-package { opacity: 0.5; }
+.unselected-package .package-body { background-color: #eeeeff; border: 5px solid #ffffff; }
+
+/*.package-2 .package-body { border: 1px solid #000000; }*/
+.package-1 .package-name { color: #ea00ff; }
+.package-2 .package-name { color: #44dd88; }
+.package-3 .package-name { color: #019cff; }
+
+.forminator-ui#forminator-module-67693.forminator-design--flat .forminator-radio:hover span.forminator-radio-image, 
+.forminator-ui#forminator-module-67693.forminator-design--flat .forminator-radio input:checked ~ span.forminator-radio-image {
+    background-color: transparent;
+}
+#radio-2 { margin: 25px 0; }
+#radio-2 label { margin-bottom: 25px; }
+.forminator-ui.forminator-custom-form[data-design="flat"] #radio-2 .forminator-radio-bullet ~ span.forminator-radio-label {
+    margin-left: 0;
+}
+.forminator-ui#forminator-module-67693.forminator-design--flat .forminator-radio { 
+    display: inline-block; width: 33%; margin: 0; padding: 0 25px;
+}
+.forminator-ui#forminator-module-67693.forminator-design--flat .forminator-radio .forminator-radio-bullet { 
+    width: 50px; height: 50px; vertical-align: middle; background-color: #EDEDED;
+}
+.forminator-ui#forminator-module-67693.forminator-design--flat #radio-2.forminator-field-radio .forminator-radio-bullet { visibility: hidden; }
+.forminator-ui#forminator-module-67693.forminator-design--flat .forminator-radio span.forminator-radio-image { 
+    width: 50px; height: 50px; vertical-align: middle; background-color: transparent;
+}
+#forminator-module-67693 .forminator-field .forminator-radio span.forminator-radio-image span, 
+#forminator-module-67693 .forminator-field .forminator-checkbox span.forminator-checkbox-image span {
+    width: 50px; height: 50px;
+}
+.forminator-ui.forminator-custom-form[data-design="flat"] .forminator-field .forminator-radio span { 
+    display: inline-block; vertical-align: middle; font-size: 18px;
+}
+.signup-page .forminator-ui#forminator-module-67693.forminator-design--flat .forminator-label { display: none; }
+.forminator-ui#forminator-module-67693.forminator-design--flat .forminator-radio input:checked + .forminator-radio-label { font-weight: 700; }
+.signup-page .forminator-ui#forminator-module-67693.forminator-design--flat .forminator-button-back {
+    color: #000; padding: 0; border: 0; font-weight: 600; background-color: transparent; text-decoration: underline;
+}
+.signup-page .forminator-ui#forminator-module-67693.forminator-design--flat .forminator-button-back:hover { 
+    background-color: transparent; color: #000; box-shadow: none;
+}
+.feature-cat { margin: 20px 0 10px 0; font-size: 16px; font-weight: 600; }
+.forminator-ui.forminator-custom-form[data-design="flat"]:not(.forminator-size--small) div.forminator-pagination-footer { clear: both; margin-top: 25px; }
+
+/* fudge to make Forminator package selection work with 6 HTML form fields */
+#forminator-module-67693 .forminator-pagination[data-name=page-break-2] .forminator-row { float:left; width:33%; } 
+#forminator-module-67693 .forminator-pagination[data-name=page-break-2] .forminator-row:nth-of-type(1) { float:left; width:100%; } 
+
+/* package selection radio buttons */
+#forminator-module-67693 .forminator-pagination[data-name=page-break-2] .forminator-row:nth-of-type(8) { 
+    position: absolute; top: 500px;
+} 
+
+/* hide the ACTUAL package selection radio buttons */
+.forminator-ui#forminator-module-67693 .forminator-row #radio-1 { opacity: 0; height: 1px; overflow: none; }
+.forminator-ui#forminator-module-67693.forminator-design--flat .forminator-radio {
+    display: none;
+}
+
+
+
+
